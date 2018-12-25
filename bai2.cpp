@@ -34,7 +34,26 @@ int timstt(ngaythang n)
 		stt + 1;
 	 return stt;
 }
-
+ngaythang ngaytustt(int stt,int nam)
+{
+	if(timstt)
+		return stt;
+}
+ngaythang tongngaythang(ngaythang n,int x)
+{
+	int kq=x + timstt(n);
+	int nam=n.nam;
+	if(kq<=365)
+		return ngaytustt(kq,nam);
+	else
+		if(namnhuan(nam)==1)
+			if(kq==365)
+				return ngaytustt(kq,nam);
+			else
+				return ngaytustt(kq-365,nam+1);
+		else
+			return ngaytustt(kq-365,nam+1);
+}
 int main()
 {
 	char t[4];
